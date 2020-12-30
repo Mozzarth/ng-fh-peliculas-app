@@ -1,0 +1,15 @@
+<div class="poster mb-5">
+  <img (click)="sendMovie()" class="img-fluid" src="{{ movie.backdrop_path | noImageMovieDb }}" />
+  <div class="card-body">
+    <h3>{{ movie.title }}</h3>
+    <div class="row text-white">
+      <div class="col-8">
+        <star-rating [value]="movie.vote_average /2" totalstars="5" checkedcolor="yellow" uncheckedcolor="grey"
+          size="14px" readonly="false"></star-rating>
+      </div>
+      <div class="col-2">
+        {{ movie.vote_average | number: "1.1-2" }}
+      </div>
+    </div>
+  </div>
+</div>
